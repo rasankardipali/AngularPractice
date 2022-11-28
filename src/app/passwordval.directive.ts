@@ -1,7 +1,8 @@
-import { Directive } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from "@angular/forms";
-import{ConfirmPasswordValidator} from "PasswordvalDirective";
-//import { FormBuilder } from '@angular/forms';
+import { Component,OnInit,Directive } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser';
+
+import { FormGroup, FormControl, Validators, FormBuilder }  from '@angular/forms';
+import {FormsModule,ReactiveFormsModule} from '@angular/forms';
 
 @Directive({
   selector: '[appPasswordval]'
@@ -18,12 +19,16 @@ export class PasswordvalDirective {
         confirmPassword: ["",Validators.required]
       },
       {
-        validator:ConfirmPasswordValidator("password", "confirmPassword")
+        validator:confirmPasswordValidator("password", "confirmPassword")
       }
     );
   }
   onSubmit() {
     this.submitted = true;
   }
+}
+
+function confirmPasswordValidator(arg0: string, arg1: string): any {
+  throw new Error('Function not implemented.');
 }
 

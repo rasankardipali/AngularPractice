@@ -7,7 +7,7 @@ import { ServerComponent } from './server/server.component';
 import { DemoComponent } from './demo/demo.component';
 import { demo1Component } from './demo1/demo1.component';
 import { PracticeComponent } from './practice/practice.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Assign24Component } from './assign24/assign24.component';
 import { DemodirectiveComponent } from './demodirective/demodirective.component';
 import { NgswitchComponent } from './ngswitch/ngswitch.component';
@@ -17,6 +17,8 @@ import { Assign25ngSwitchComponent } from './assign25ng-switch/assign25ng-switch
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { PasswordvalDirective } from './passwordval.directive';
+
+
 
 
 
@@ -36,7 +38,9 @@ import { PasswordvalDirective } from './passwordval.directive';
     Assign25ngSwitchComponent,
     AttriComponent,
     CustdirDirective,
-    PasswordvalDirective
+    PasswordvalDirective,
+
+ 
     
    
 
@@ -45,7 +49,10 @@ import { PasswordvalDirective } from './passwordval.directive';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
+    BrowserModule,
+   
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

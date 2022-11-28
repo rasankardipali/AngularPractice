@@ -18,9 +18,11 @@
 <p appCustdir>Custom para</p> -->
 
 <h4> password validation</h4>
- <label>Enter Password </label><input   appPasswordval type="password" value=""><br>
+ <!-- <label>Enter Password </label><input   appPasswordval type="password" value=""><br>
 
- <label>Enter Password </label><input   appPasswordval type="password" value="">
+ <label>Enter Password </label><input   appPasswordval type="password" value=""> -->
+
+<div>
 
  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 	<div class="form-group">
@@ -51,3 +53,5 @@
 	</div>
 	<button type="submit" class="btn btn-success">Submit</button>
 </form>
+
+</div>
