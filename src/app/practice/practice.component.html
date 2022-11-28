@@ -1,13 +1,17 @@
 <p>practice works!</p>
 <button> submit</button><br>
 <input type="text">
-
-<label>{{ fistName}}</label>
-<label>{{ lastName}}</label>
-<!-- <label>{{ name }}</label>
-<p>{{nyname}}</p>
-<label>{{allowNewServer}}</label>
-<label>{{ serverStatus}}</label> -->
-
-
-<!-- <label>{{getServerStatus() }}</label> -->
+<label>{{fistName}}</label>
+{{fistName}}
+{{lastName}}
+{{name}}
+{{serverId}}
+<p>serverId{{serverId}}is {{getServerStatus()}}</p>
+<button [disabled]="!allowNewServer">Add Server</button>
+<button [disabled]="!allowNewServer" (click)="onCreateServer()">Add Server</button>
+{{ serverCreationStatus}}
+<!-- <img [src]="imgurl"> -->
+<div> two way dataBinding</div>
+<input type="text" [(ngModel)]="ServerName">
+{{ServerName}}
+<button type="button" class="btn btn-primary">Primary</button>

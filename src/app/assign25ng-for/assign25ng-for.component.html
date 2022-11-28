@@ -1,0 +1,30 @@
+<p>assign25ng-for works!</p>
+<div>
+    <p>ASSIGNMENT ON *ngFor</p>
+    <div class="t1">
+       {{tital}}
+    </div>
+</div>
+<div>
+    <table class="table">
+       
+        <thead>
+           
+            <tr>
+                <th> srNo</th>
+                <th>courseName</th>
+                <th>developedBy</th>
+                <th>developedYear</th>
+            </tr>
+         </thead>
+  
+    <tbody>
+        <tr *ngFor="let Courses of course">
+            <td>{{Courses.srNo}}</td>
+            <td>{{Courses.courseName}}</td>
+            <td>{{Courses.developedBy}}</td>
+            <td>{{Courses.developedYear}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>

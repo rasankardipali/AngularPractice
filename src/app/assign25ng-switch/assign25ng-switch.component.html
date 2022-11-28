@@ -1,0 +1,33 @@
+
+<table class="t2">
+<p class="t2">assign25ng-switch works!</p>
+<div class="container">
+    <div class="row">
+        <div class="col-md-4">
+            <select  class="form-control" (change)=" getProductValue($event)" >
+                <option value="Please Select Subject">Please Select Subject</option>
+                <option value="JAVA">JAVA</option>
+                <option value="C#">C# </option>
+                <option value=".NET">.NET</option>
+                <option value="ANGULAR">ANGULAR</option>
+                <option value="C LANGUAGE">C LANGUAGE</option>
+                <option value="C++"> C++</option>
+                <option value="HTML">HTML</option>
+            </select>
+
+        </div>
+        <div  class="col-md-12" [ngSwitch]="selectedProduct">
+          <h2 class="text-success" *ngSwitchDefault>Please Select Subject</h2>
+          <h2 class="text-success" *ngSwitchCase="'JAVA'">JAVA</h2>
+          <h2 class="text-success" *ngSwitchCase="'C#'">C#</h2>
+          <h2 class="text-success" *ngSwitchCase="'.NET'">.NET</h2>
+          <h2 class="text-success" *ngSwitchCase="'ANGULAR'">ANGULAR</h2>
+          <h2 class="text-success" *ngSwitchCase="'C LANGUAGE'">C LANGUAGE</h2>
+          <h2 class="text-success" *ngSwitchCase="'C++'">C++</h2>
+          <h2 class="text-success" *ngSwitchCase="'HTML'">HTML</h2>
+            
+        </div>
+
+    </div>
+</div>
+</table>

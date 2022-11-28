@@ -1,0 +1,24 @@
+.table{
+    height: 200pt;
+    width: 700pt;
+    border: 4pt;
+    border-color: blue;
+    background-color: rgb(135, 231, 231);
+    text-align: center;
+    margin-left: 260pt;
+}
+.t1{
+    margin-left: 260pt;
+     color: #ff7300;
+    width: 700pt;
+    text-align: center;
+    background-color: rgb(187, 135, 236);
+    font-size: large;
+    font-weight: bold;
+   
+}
+p{ text-align: center;
+    color: rgb(14, 9, 19);
+    font-weight: bold;
+}
+
