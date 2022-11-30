@@ -17,6 +17,8 @@ import { Assign25ngSwitchComponent } from './assign25ng-switch/assign25ng-switch
 import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { PasswordvalDirective } from './passwordval.directive';
+import { InputedirComponent } from './inputedir/inputedir.component';
+
 
 
 
@@ -39,6 +41,8 @@ import { PasswordvalDirective } from './passwordval.directive';
     AttriComponent,
     CustdirDirective,
     PasswordvalDirective,
+    InputedirComponent,
+
 
  
     

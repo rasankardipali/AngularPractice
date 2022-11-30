@@ -12,3 +12,12 @@
     border: 4px;
     border-color: black;
 }
+.tt{
+    background-color: rgb(240, 158, 158);
+    font-size: large;
+    text-align: center;
+    margin-left: 400pt;
+    height:200pt ;
+    width: 300px;
+
+}

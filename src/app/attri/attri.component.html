@@ -17,12 +17,12 @@
 <p>Normal para</p>
 <p appCustdir>Custom para</p> -->
 
-<h4> password validation</h4>
+<!-- <h4> password validation</h4> -->
  <!-- <label>Enter Password </label><input   appPasswordval type="password" value=""><br>
 
  <label>Enter Password </label><input   appPasswordval type="password" value=""> -->
 
-<div>
+<!-- <div>
 
  <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
 	<div class="form-group">
@@ -54,4 +54,60 @@
 	<button type="submit" class="btn btn-success">Submit</button>
 </form>
 
-</div>
+</div> -->
+
+
+<!-- 
+
+<div class="container">  
+    <div class="row justify-content-center">  
+        <div class="col-md-8">  
+            <div class="card">  
+                <div class="card-header">Register</div>  
+                <form (ngSubmit)="onSubmit()" #frm="ngForm">   
+                    <div class="card-body">  
+                        <div class="form-group row">  
+                            <label for="email" class="col-md-4 col-form-label text-md-right">Email</label>  
+                            <div class="col-md-6">  
+                                <input type="text" [ngModel]='user.email'  class="form-control" name="email">  
+                            </div>  
+                        </div>  
+                        <div class="form-group row">  
+                            <label for="username" class="col-md-4 col-form-label text-md-right">User Name</label>  
+                            <div class="col-md-6">  
+                                <input type="text" [ngModel]='user.username' class="form-control" name="username">  
+                            </div>  
+                        </div>  
+                        <div class="form-group row">  
+                            <label for="pass" class="col-md-4 col-form-label text-md-right">Password</label>  
+                            <div class="col-md-6">  
+                                <input type="password" [ngModel]='user.password' class="form-control" name="txtPassword" #txtPassword="ngModel" compare-password="txtConfirmPassword" parent="true" required>  
+                                <span class="text-danger" *ngIf="txtPassword.dirty && txtPassword.errors && txtPassword.errors.required">Password is required </span>  
+                            </div>  
+                        </div>  
+                        <div class="form-group row">  
+                            <label for="confirm" class="col-md-4 col-form-label text-md-right">Confirm Password</label>  
+                            <div class="col-md-6">  
+                                <input type="password" [ngModel]='user.confirmPassword' class="form-control" name="txtConfirmPassword" #txtConfirmPassword="ngModel" compare-password="txtPassword" required>   
+                                <span class="text-danger" *ngIf="txtConfirmPassword.dirty && txtConfirmPassword.errors && txtConfirmPassword.errors.required">Password is required </span>  
+                                <span class="text-danger" *ngIf="txtConfirmPassword.dirty && ((txtPassword.errors && txtPassword.errors.compare) || (txtConfirmPassword.errors && txtConfirmPassword.errors.compare)) && !txtConfirmPassword.errors.required">Password Doesn't match</span>  
+                            </div>  
+                        </div>  
+                        <div class="col-md-6 offset-md-4">  
+                            <button type="submit" [disabled]="!frm.isValid" class="btn btn-primary">  
+                                Register  
+                            </button>  
+                        </div>  
+                    </div>  
+                </form >  
+  
+            </div>  
+        </div>  
+    </div>  
+</div>   -->
+<!-- <p> use of #uusername</p>
+<input type="text " name="" id="" #uusername>
+<button (click)="show(uusername.value)">show </button>
+<div>
+{{uname}}</div> -->
+
