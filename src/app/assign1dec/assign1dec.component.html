@@ -1,0 +1,14 @@
+<h4 style="color:rgb(186, 34, 183); text-align:center ;">assign1dec works!<br> Assignment on ngStyle ngClass Directive <br>Button click Times{{count}}</h4>
+
+<div  style="text-align:center ;">
+<div  *ngIf="isDisplay" class="box" [ngStyle]="{'background-color':getColor()}">
+        
+         This is My Foveate Paragraph................<br>
+         I am Angular Developer........<br>
+         I love Angular..........
+</div>
+
+<button type="button"  (click)="toggleDisplay(bt.value)" class="btn btn-danger"  #bt>Display Details </button>
+</div>
+
+

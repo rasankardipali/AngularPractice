@@ -20,6 +20,7 @@ import { PasswordvalDirective } from './passwordval.directive';
 import { InputedirComponent } from './inputedir/inputedir.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { HookPracticeComponent } from './hook-practice/hook-practice.component';
+import { Assign1decComponent } from './assign1dec/assign1dec.component';
 
 
 
@@ -46,6 +47,7 @@ import { HookPracticeComponent } from './hook-practice/hook-practice.component';
     InputedirComponent,
     HooksComponent,
     HookPracticeComponent,
+    Assign1decComponent,
 
 
  

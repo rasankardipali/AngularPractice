@@ -1,0 +1,9 @@
+.box{
+    height: 200pt;
+    width: 300pt;
+    text-align: center;
+    color: brown;
+    border: 20;
+    margin-left: 500pt;
+    font-size: x-large;
+}
