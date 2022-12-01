@@ -52,7 +52,7 @@
 
 </app-demo>
 </div> -->
-<div>
+<!-- <div>
   <app-demo  (arrayval)=" addData($event)">
   
   </app-demo>
@@ -80,7 +80,7 @@
   </tbody>
 </table>
 </div>
-
+ -->
 
 <!-- 
 
@@ -89,5 +89,22 @@
   
   </app-demo>
   </div> -->
+    
+  <!-- <app-hooks [userid]="uid"></app-hooks>
+<select (change)="uid = sid.value" #sid>
+  <option selected disabled>No value selected</option>
+  <option [value]="id" *ngFor="let id of [1,2,3,4]">
+    {{id}}
+  </option>
+  </select> -->
+
+
+  <app-hook-practice [arrayval]="name"></app-hook-practice>
+  <select (change)="name=unm.value" #unm>
+    <option  selected disabled> No charactor selected</option>
+    <option [value]="name" *ngFor="let name of[ 'a', 'b',' c',' d', ' e' ] ">
+    {{name}}
+  </option>
+  </select>
 
 <router-outlet></router-outlet>

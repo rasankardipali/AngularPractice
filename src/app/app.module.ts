@@ -18,6 +18,8 @@ import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { PasswordvalDirective } from './passwordval.directive';
 import { InputedirComponent } from './inputedir/inputedir.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { HookPracticeComponent } from './hook-practice/hook-practice.component';
 
 
 
@@ -42,6 +44,8 @@ import { InputedirComponent } from './inputedir/inputedir.component';
     CustdirDirective,
     PasswordvalDirective,
     InputedirComponent,
+    HooksComponent,
+    HookPracticeComponent,
 
 
  

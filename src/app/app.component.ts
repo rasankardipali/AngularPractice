@@ -8,7 +8,8 @@ import { Courses } from './models/course';
 })
 export class AppComponent {
   title = 'angularapp';
-  uname=" i am angular devloper"
+  // uname="i am angular devloper"
+  public uid: number;
 
   // Courses: any[]=[
   //   { srNo:1,courseName:"FullStack developer",developedBy:"Mithun Roi",developedYear:2005}];
