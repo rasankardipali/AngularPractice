@@ -1,0 +1,31 @@
+<p>assign2dec works!</p>
+<div class="container mt-5"  style="background-color:pink ;">
+    <h3 style="color:rgb(186, 10, 163) ; margin-left: 80pt;">  Assignment on Add & Delete Data from Table</h3>
+    <div class="row">
+        <div class="col-mt-12">
+            <input type="text" #myuser class="form-control" [placeholder]="userName">
+            <button type="button" class="btn btn-danger mt-5" (click)="onClick(myuser)" >  Add User</button>
+      <table  class=" table table-bordered mt-3" >
+        <thead class="thead-light">
+            <tr>
+                <th> Sr.No </th>
+                <th> User Name </th>
+                <th> Delete User </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor=" let i of userlist; index as userno">
+                <td>{{userno+1}}</td>
+                <td>{{i}}</td>
+                <td><button class="btn btn-success"  (click)="Ondelete(userno)"> Remove User</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+
+
+
+        </div>
+
+    </div>
+</div>

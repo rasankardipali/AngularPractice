@@ -21,6 +21,8 @@ import { InputedirComponent } from './inputedir/inputedir.component';
 import { HooksComponent } from './hooks/hooks.component';
 import { HookPracticeComponent } from './hook-practice/hook-practice.component';
 import { Assign1decComponent } from './assign1dec/assign1dec.component';
+import { Assignmrnt1decComponent } from './assignmrnt1dec/assignmrnt1dec.component';
+import { Assign2decComponent } from './assign2dec/assign2dec.component';
 
 
 
@@ -48,6 +50,8 @@ import { Assign1decComponent } from './assign1dec/assign1dec.component';
     HooksComponent,
     HookPracticeComponent,
     Assign1decComponent,
+    Assignmrnt1decComponent,
+    Assign2decComponent,
 
 
  
