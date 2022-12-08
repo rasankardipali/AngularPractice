@@ -117,7 +117,7 @@
           
  
         <div class="col-auto">
-            <button type="submit" class="btn btn-primary mb-2"   >Submit</button>   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<button type="reset" class="btn btn-success"> Reset </button>
+            <button type="submit" class="btn btn-primary mb-2"  [disabled]="!myForm.valid"  >Submit</button>   &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;<button type="reset" class="btn btn-success"> Reset </button>
           </div>
 
           
