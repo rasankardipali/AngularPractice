@@ -18,13 +18,15 @@ import { AttriComponent } from './attri/attri.component';
 import { CustdirDirective } from './custdir.directive';
 import { PasswordvalDirective } from './passwordval.directive';
 import { InputedirComponent } from './inputedir/inputedir.component';
-import { HooksComponent } from './hooks/hooks.component';
+
 import { HookPracticeComponent } from './hook-practice/hook-practice.component';
 import { Assign1decComponent } from './assign1dec/assign1dec.component';
 import { Assignmrnt1decComponent } from './assignmrnt1dec/assignmrnt1dec.component';
 import { Assign2decComponent } from './assign2dec/assign2dec.component';
-
-
+import { AddDeleteComponent } from './add-delete/add-delete.component';
+import { HooksComponent } from './hooks/hooks.component';
+import { SimpleformComponent } from './simpleform/simpleform.component';
+import { Assign8DesComponent } from './assign8-des/assign8-des.component';
 
 
 
@@ -52,6 +54,11 @@ import { Assign2decComponent } from './assign2dec/assign2dec.component';
     Assign1decComponent,
     Assignmrnt1decComponent,
     Assign2decComponent,
+    AddDeleteComponent,
+    SimpleformComponent,
+    Assign8DesComponent,
+   
+
 
 
  

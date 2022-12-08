@@ -6,7 +6,7 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
   styleUrls: ['./demo.component.css']
 })
 export class DemoComponent implements OnInit {
-// @Input() myinputMsg:string;
+ @Input() myinputMsg:string;
 @Input() myinputMsg1:object;
 
 // @Output() foodevent: EventEmitter<string> = new EventEmitter<string>();
@@ -22,8 +22,8 @@ courses: any[] = [
   constructor() { }
 
   ngOnInit() {
-    // console.log("Form parant componant",this.myinputMsg);
-    // console.log("Array element",this.myinputMsg1);
+    console.log("Form parant componant",this.myinputMsg);
+    console.log("Array element",this.myinputMsg1);
 
   }
  

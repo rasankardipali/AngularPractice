@@ -35,10 +35,10 @@
 <app-demo></app-demo>
 <app-inputedir>
 <router-outlet></router-outlet>
- <app-inputedir></app-inputedir> -->
-<!-- <app-demo [myinputMsg]="uname"></app-demo> -->
-<!-- <app-demo [myinputMsg1]="Courses"></app-demo> -->
-<app-attri></app-attri>
+  <app-inputedir></app-inputedir> 
+  <app-demo [myinputMsg]="uname"></app-demo>  -->
+<!-- <app-demo [myinputMsg1]="Courses"></app-demo>
+<app-attri></app-attri> ---> 
 <!-- <app-server></app-server> -->
 
 <!-- <ul *ngFor="let f of foods">
@@ -80,9 +80,8 @@
   </tbody>
 </table>
 </div>
- -->
+ 
 
-<!-- 
 
 <div>
   <app-demo  (arrayval)="addData($event)">
@@ -98,8 +97,8 @@
   </option>
   </select> -->
 
-
-  <!-- <app-hook-practice [arrayval]="name"></app-hook-practice>
+<!-- 
+  <app-hook-practice [arrayval]="name"></app-hook-practice>
   <select (change)="name=unm.value" #unm>
     <option  selected disabled> No charactor selected</option>
     <option [value]="name" *ngFor="let name of[ 'a', 'b',' c',' d', ' e' ] ">
@@ -109,5 +108,66 @@
 
   <!-- <app-assign1dec></app-assign1dec>
   <app-assignmrnt1dec></app-assignmrnt1dec> -->
-  <app-assign2dec></app-assign2dec>
+<!-- 
+  <div class="row" style="text-align:center;">
+    <div class="col-md-12">
+  <input type="text" placeholder="enter value" (blur)="handleData($event)">
+  
+  <p>Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"></p>
+  <p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
+  <button class="btn btn-primary" ></button> -->
+  
+
+ 
+
+  <!-- <app-assign2dec></app-assign2dec>  -->
+
+  <!-- <app-inputedir></app-inputedir> 
+  <app-demo [myinputMsg]="uname"></app-demo>   -->
+ <!-- <app-demo [myinputMsg1]="Courses"></app-demo> -->
+  <!-- ******************************************** -->
+<!-- <div class="row" style="text-align:center;">
+  <div class="col-md-12">
+<input type="text" placeholder="enter value" (blur)="handleData($event)">
+
+<p>Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"></p>
+<p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
+<button class="btn btn-primary" ></button> -
+  </div> 
+
+    <app-hooks [userid]="uid" [parentData]="data" [product]="product">
+    <h1 #child>This is child content coming from parent component</h1> 
+    
+  
+  </app-hooks>  
+  <app-hooks>
+    <h1> this is ng contains</h1>
+  </app-hooks>  -->
+<!-- ******************************************** -->
+ <!-- <app-assign2dec></app-assign2dec>  -->
+
+
+
+
+ <!-- ******************************************** -->
+ <!-- <div class="row" style="text-align:center;">
+  <div class="col-md-12">
+<input type="text" placeholder="enter value" (blur)="handleData($event)">
+
+<p>Product Name: <input type="text" placeholder="Enter product name" [(ngModel)]="name"></p>
+<p>Product Price: <input type="text" placeholder="Enter product price" [(ngModel)]="price"></p>
+<button class="btn btn-primary" > product</button> -
+  
+
+    <app-hooks   *ngIf="appchildExist" [userid]="uid" [parentData]="data" [product]="product">
+    <h1 #child>This is child content coming from parent component</h1> 
+    
+    
+  </app-hooks> 
+  <button class="btn btn-danger"   height="50" wight="60" (click)="destroy()">Destroy component</button> 
+</div>  -->
+ <!-- ******************************************** -->
+ <!-- <app-simpleform></app-simpleform> -->
+  <!-- ******************************************** -->
+ <app-assign8-des></app-assign8-des>
 <router-outlet></router-outlet>

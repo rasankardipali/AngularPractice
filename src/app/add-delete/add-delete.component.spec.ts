@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HooksComponent } from './hooks.component';
+import { AddDeleteComponent } from './add-delete.component';
 
-describe('HooksComponent', () => {
-  let component: HooksComponent;
-  let fixture: ComponentFixture<HooksComponent>;
+describe('AddDeleteComponent', () => {
+  let component: AddDeleteComponent;
+  let fixture: ComponentFixture<AddDeleteComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ HooksComponent ]
+      declarations: [ AddDeleteComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(HooksComponent);
+    fixture = TestBed.createComponent(AddDeleteComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

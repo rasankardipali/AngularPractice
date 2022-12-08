@@ -1,0 +1,11 @@
+.container1{
+
+   
+    color:rgb(33, 2, 76);
+    background-image: url("D:\angular1\angularProject\angularapp2\c6.webp");
+}
+
+input.ng-invalid.ng-touched {
+    border: 1px solid red;
+    box-shadow: 0 0 13px #ff000021;
+}
