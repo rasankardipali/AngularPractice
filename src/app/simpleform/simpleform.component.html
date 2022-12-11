@@ -4,27 +4,68 @@
     <div class="row justify-content-center">
         <div class="col-md-6 text-left rounded shadow py-5">
             <form (ngSubmit)="OnSubmit(myForm)" #myForm="ngForm">
+                <div ngModelGroup="userdetail" #userdetail="ngModelGroup">
                 <div class="form-group">
                     <label for="username">User Name</label>
-                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" ngModel required>
-                  </div>
-                <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="email"  email name="email" placeholder="Enter email" ngModel required>
-                  
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter user name" [(ngModel)]="username" required>
+                    <small *ngIf="username">User Name is:{{username}}</small>
                 </div>
                 
-
                 <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email"    pattern="@codemindtechnology.com" email name="email" placeholder="Enter email" ngModel   #email="ngModel"   required>
+                  <small class="text-danger" *ngIf="!email.valid && email.touched">Enter Valid Domain is @codemindtechnology.com </small>
+                </div>
+            </div>
+
+                <div class="form-group"> 
                     <label for="course">Select Course</label>
-                    <select class="form-control" name="course" id="course" ngModel>
+                    <select class="form-control" name="course" id="course" [ngModel]="defoltValue">
                         <option value="Angular">Angular</option>
                         <option value="HTML">HTML</option>
                         <option value="JavaScript">JavaScript</option>
                     </select>
                 </div>
+
+
+
+                <div class="form-group">
+                    <div *ngFor="let gender of genders" class="custom-control custom-radio">
+                     <input type="radio" id="{{gender.id}}" name="gender" value="{{gender.value}}" [ngModel]="  defoltgender" class="custom-control-input">
+                     <label for="{{gender.id}}" class="custom-control-label">{{gender.value}}</label>
+                    </div>
+
+                </div>
+                    
+                    <label>Enter Date :</label>
+                    <div class="input-append date" id="dp3" data-date-format="dd-mm-yyyy" >
+                                <input class="span2" size="16" type="date"  min="2022-12-11" name="Date"   ngModel   ><span class="add-on" ><i
+                          class="icon-th"></i></span>
+          
+                    </div>
+
+
+
+
+
+
+
+               
                
                 <button type="submit" [disabled]="!myForm.valid" class="btn btn-primary">Submit</button>
+
+                <div class="row jestify-content-center  mt-4" *ngIf="submitted">
+                    <div  class="col-md-6  rounded shadow py-5">
+                        <h2> Form Data</h2>
+                         <p> Course:<strong>{{employee.course}} </strong></p>
+                        <p> User Name:<strong>{{employee.UserName}} </strong></p>
+                        <p> Email:<strong>{{employee.email}} </strong></p> 
+                        <p>Gender:<strong>{{employee.genders}}</strong> </p>
+                    </div>
+                </div>
+
+
+
               </form>
         </div>
     </div>
