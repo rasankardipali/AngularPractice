@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { FormArray, FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
+import { Observable } from 'rxjs/internal/Observable';
 
 @Component({
   selector: 'app-reactiveform',
@@ -8,23 +9,77 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class ReactiveformComponent implements OnInit {
  myReactiveform:FormGroup;
-  constructor() { }
+ defoultvalue='Angular'
+ defoultvalue1="Male"
+ submitted=false;
+notAllowedNames=['codemind','technology'];
+ genders=[
+  {id:"1",value:'Male'},
+  {id:"2",value:'Female'}
+]
+
+
+myReactiveForm: FormGroup;
+  constructor() {   this.createForm(); 
+  }
 
   ngOnInit() {
-   this.createForm();
+
+
+   setTimeout(() => {
+    this.myReactiveform.patchValue({
+      'userDetails' : {
+        'userName': 'Codemind1122',
+        'email': 'test@gmail.com'
+      }
+    })
+  }, 3500);
+
   }
   OnSubmit(){
+  this.submitted=true;
     console.log(this.myReactiveform);
     
   }
 
 
 
-createForm(){
-  this.myReactiveform = new FormGroup({
-    'userName': new FormControl('',Validators.required),
-    'email':new FormControl('',Validators.required)
+  OnAddSkills() {
+    (<FormArray>this.myReactiveform.get('skills')).push(new FormControl(null, Validators.required));
+   }
+
+NaNames(controls:FormControl){
+if(this.notAllowedNames.indexOf(controls.value ) !== -1){
+  return{'notAllowedNames':true}
+}
+return null
+}
+NaEmails(control:FormControl): Promise<any> | Observable<any> {
+  const myResponse = new Promise<any>((resolve, reject) => {
+    setTimeout(() => {
+      if(control.value === 'codemindtechnology@gmail.com'){
+        resolve({'emailNotAllowed': true})
+      } else {
+        resolve(null)
+      }
+    }, 3000);
   })
+  return myResponse;
+}
+
+
+createForm(){
+
+  this.myReactiveform = new FormGroup({
+'userDetail':new FormGroup({'userName': new FormControl('',[ Validators.required,this.NaNames.bind(this)]),
+'email':new FormControl('',[Validators.required,Validators.email,this.NaEmails])}),
+    'Course':new FormControl('Angular'),
+    'gender': new FormControl('Male'),
+    'skills': new FormArray([
+      new FormControl(null, Validators.required)
+     ])
+  })
+ 
 }
 
 }

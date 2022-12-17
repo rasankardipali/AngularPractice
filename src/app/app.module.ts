@@ -29,6 +29,8 @@ import { SimpleformComponent } from './simpleform/simpleform.component';
 import { Assign8DesComponent } from './assign8-des/assign8-des.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { Assign12DecComponent } from './assign12-dec/assign12-dec.component';
+import { TdformComponent } from './tdform/tdform.component';
+import { RaformComponent } from './raform/raform.component';
 
 
 
@@ -61,6 +63,8 @@ import { Assign12DecComponent } from './assign12-dec/assign12-dec.component';
     Assign8DesComponent,
     ReactiveformComponent,
     Assign12DecComponent,
+    TdformComponent,
+    RaformComponent,
    
 
 
