@@ -31,7 +31,9 @@ import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { Assign12DecComponent } from './assign12-dec/assign12-dec.component';
 import { TdformComponent } from './tdform/tdform.component';
 import { RaformComponent } from './raform/raform.component';
-
+import { Servicecop1Component } from './servicecop1/servicecop1.component';
+import { Servicecop2Component } from './servicecop2/servicecop2.component';
+import { HttpClientModule} from '@angular/common/http';
 
 
 
@@ -65,6 +67,8 @@ import { RaformComponent } from './raform/raform.component';
     Assign12DecComponent,
     TdformComponent,
     RaformComponent,
+    Servicecop1Component,
+    Servicecop2Component,
    
 
 
@@ -80,7 +84,7 @@ import { RaformComponent } from './raform/raform.component';
     AppRoutingModule,
     FormsModule,
     BrowserModule,
-   
+    HttpClientModule,
     ReactiveFormsModule
   ],
   providers: [],

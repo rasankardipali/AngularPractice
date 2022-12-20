@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { DemeserviceService } from './demeservice.service';
 import { Courses } from './models/course';
 import { Product } from './models/Product';
 
@@ -8,6 +9,21 @@ import { Product } from './models/Product';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+array=[];
+  constructor( private _demeserviceService:DemeserviceService){
+
+  }
+ngOnInit():void{
+  this._demeserviceService.getUserData().subscribe(data =>{
+    console.log('getting data from API',data);
+    this.array.push(data);
+  
+  })
+
+}
+
+
   title = 'angularapp';
   // uname="i am angular devloper"
   public uid: number;
