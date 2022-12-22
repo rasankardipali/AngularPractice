@@ -1,0 +1,53 @@
+<p>pipedemo works!</p>
+<div  class="container"style="background-color: rgb(197, 163, 230);">
+        <h1  style="text-align: center;" > PRACTICE OF PIPE </h1>
+<div >
+      
+    <div class="row justify-content-center"   >
+        inbult pipes <br>
+    todaysDate={{todayDate | date}}<br>
+    todaysDate={{todayDate | date:'mm/dd/yyy'}}<br>
+    todaysDate={{todayDate | date:'fullDate'}}<br>
+
+    </div>
+    </div>
+    <div class="container">
+      
+        <div class="row justify-content-center">
+  Name in  uppercase={{Myname | uppercase }}<br>
+  Name in  lowercase={{Myname | lowercase }}<br>
+   liegth of Name ={{Myname | count }}<br>
+</div>
+</div>
+<div class="container">
+  
+    <div class="row justify-content-center">
+      currency pipe <br>
+      price={{price}} <br>
+    INR={{price | currency:'INR'}}<br>
+    USD={{price | currency:'USD'}}<br>
+</div>
+</div>
+<div class="container">
+  
+    <div class="row justify-content-center">
+    Asency   
+<br>
+
+ get data obser={{obser | async}}
+        
+
+</div>
+</div>
+<div class="container">
+  
+    <div class="row justify-content-center">
+
+mobile price={{price1 | number}}<br>
+oobject={{obj | json}}
+
+</div>
+
+
+</div>
+</div>

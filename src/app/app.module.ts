@@ -38,6 +38,8 @@ import { Copm1Component } from './copm1/copm1.component';
 import { Copm2Component } from './copm2/copm2.component';
 import { Copm3Component } from './copm3/copm3.component';
 import { Copm4Component } from './copm4/copm4.component';
+import { PipedemoComponent } from './pipedemo/pipedemo.component';
+import { CountPipe } from './count.pipe';
 
 
 
@@ -76,7 +78,9 @@ import { Copm4Component } from './copm4/copm4.component';
     Copm1Component,
     Copm2Component,
     Copm3Component,
-    Copm4Component
+    Copm4Component,
+    PipedemoComponent,
+    CountPipe
 
 
 
