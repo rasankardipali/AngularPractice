@@ -34,6 +34,10 @@ import { RaformComponent } from './raform/raform.component';
 import { Servicecop1Component } from './servicecop1/servicecop1.component';
 import { Servicecop2Component } from './servicecop2/servicecop2.component';
 import { HttpClientModule} from '@angular/common/http';
+import { Copm1Component } from './copm1/copm1.component';
+import { Copm2Component } from './copm2/copm2.component';
+import { Copm3Component } from './copm3/copm3.component';
+import { Copm4Component } from './copm4/copm4.component';
 
 
 
@@ -69,7 +73,10 @@ import { HttpClientModule} from '@angular/common/http';
     RaformComponent,
     Servicecop1Component,
     Servicecop2Component,
-   
+    Copm1Component,
+    Copm2Component,
+    Copm3Component,
+    Copm4Component
 
 
 

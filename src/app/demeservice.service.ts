@@ -15,7 +15,7 @@ export class DemeserviceService {
     {name:'TV',id:103},
   ];
 
-  apiURL = 'https://jsonplaceholder.typicode.com/users';
+  apiURL = 'https://jsonplaceholder.typicode.com/';
   constructor(private http:HttpClient) { }
 
 display(){
@@ -23,7 +23,12 @@ display(){
 }
 
 getUserData(){
-  return this.http.get(this.apiURL);
+  let users='users'
+  return this.http.get(this.apiURL+users);
+}
+getDataposts(){
+  let posts='posts'
+  return this.http.get(this.apiURL+posts);
 }
 
 

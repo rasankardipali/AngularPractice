@@ -20,6 +20,10 @@ ngOnInit():void{
     this.array.push(data);
   
   })
+  this._demeserviceService.getDataposts().subscribe(results=>{
+    console.log('posts',results);
+    
+  })
 
 }
 
