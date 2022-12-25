@@ -19,7 +19,13 @@ export class Copm4Component implements OnInit {
   updateUserName(uname){
     console.log(uname.value);
     this._utilityService.username.next(uname.value);
-    
+    let employee=[{id:4,
+      name:'Seeta',
+      gender:'Female'}] 
+//next method is used to send massage to an observable i.e username
+      this._utilityService.username.next(JSON.stringify(employee));
   }
+    
+
 
 }

@@ -1,0 +1,31 @@
+<p>genderpipe works!</p>
+
+<div class="row justify-content-center" style="background-color: rgb(227, 214, 197);">
+    <div class="col-md-8 form-inline mb-2" >
+       <h2> Costume Pipe Assignment</h2>
+
+    </div>
+
+    <div class="col-md-8">
+<table class="table">
+   <thead>
+    <tr>
+    <th> Id </th>   
+    <th>Name </th>   
+    <th> Gender </th>   
+    <th> Salary </th>    
+    </tr>
+   </thead> 
+    <tbody>
+        <tr  *ngFor="let e of employee ">
+        <td>{{e.id}}</td>
+        <td>{{e.name | gender:e.gender1}}</td>
+        <td>{{e.gender1 }}</td>
+        <td>{{e.salary}}</td>
+        </tr>
+    </tbody>
+</table>
+
+
+    </div>
+</div>

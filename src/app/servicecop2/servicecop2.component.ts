@@ -9,6 +9,8 @@ import { DemeserviceService } from '../demeservice.service';
 export class Servicecop2Component implements OnInit {
 
   products={};
+
+
   constructor(private _demeserviceService:DemeserviceService) { }
 
   ngOnInit() {

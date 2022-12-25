@@ -40,6 +40,19 @@ import { Copm3Component } from './copm3/copm3.component';
 import { Copm4Component } from './copm4/copm4.component';
 import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { CountPipe } from './count.pipe';
+import { FilterpipeComponent } from './filterpipe/filterpipe.component';
+import { FilterPipe } from './filter.pipe';
+import { ProductComponent } from './product/product.component';
+import { ContactusComponent } from './contactus/contactus.component';
+import { AboutusComponent } from './aboutus/aboutus.component';
+import { HomeComponent } from './home/home.component';
+import { LoginComponent } from './login/login.component';
+import { FeedbackComponent } from './feedback/feedback.component';
+import { GalleryComponent } from './gallery/gallery.component';
+import { RegistrationComponent } from './registration/registration.component';
+import { GenderpipeComponent } from './genderpipe/genderpipe.component';
+import { GenderPipe } from './gender.pipe';
+import { Employee1Component } from './employee1/employee1.component';
 
 
 
@@ -80,7 +93,20 @@ import { CountPipe } from './count.pipe';
     Copm3Component,
     Copm4Component,
     PipedemoComponent,
-    CountPipe
+    CountPipe,
+    FilterpipeComponent,
+    FilterPipe,
+    ProductComponent,
+    ContactusComponent,
+    AboutusComponent,
+    HomeComponent,
+    LoginComponent,
+    FeedbackComponent,
+    GalleryComponent,
+    RegistrationComponent,
+    GenderpipeComponent,
+    GenderPipe,
+    Employee1Component
 
 
 

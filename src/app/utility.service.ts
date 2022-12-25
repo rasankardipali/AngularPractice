@@ -8,6 +8,7 @@ export class UtilityService {
 
 // username=new Subject<any>();
 username=new BehaviorSubject('Angular project');
+employee= new Subject<object>();
 
   constructor() { }
 }
