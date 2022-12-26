@@ -53,6 +53,11 @@ import { RegistrationComponent } from './registration/registration.component';
 import { GenderpipeComponent } from './genderpipe/genderpipe.component';
 import { GenderPipe } from './gender.pipe';
 import { Employee1Component } from './employee1/employee1.component';
+import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { LaptopComponent } from './product/laptop/laptop.component';
+import { TvComponent } from './product/tv/tv.component';
+import { WashingMachinComponent } from './product/washing-machin/washing-machin.component';
+import { TabletComponent } from './product/tablet/tablet.component';
 
 
 
@@ -106,7 +111,12 @@ import { Employee1Component } from './employee1/employee1.component';
     RegistrationComponent,
     GenderpipeComponent,
     GenderPipe,
-    Employee1Component
+    Employee1Component,
+    PagenotfoundComponent,
+    LaptopComponent,
+    TvComponent,
+    WashingMachinComponent,
+    TabletComponent
 
 
 
