@@ -2,11 +2,13 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
+import { DemopostComponent } from './demopost/demopost.component';
 import { FeedbackComponent } from './feedback/feedback.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { LaptopComponent } from './product/laptop/laptop.component';
 import { ProductComponent } from './product/product.component';
 import { TabletComponent } from './product/tablet/tablet.component';
@@ -27,6 +29,8 @@ const routes: Routes = [
     {path:'tablet',component:TabletComponent},
     {path:'washingMachin',component:WashingMachinComponent},
    ]}, // localhost://4200/product
+   {path:'post',component:DemopostComponent},
+   {path:'postdetails/:id',component:PostdetailsComponent},
 { path:'contactus', component: ContactusComponent},
 {path:'gallery', component:GalleryComponent},
 {path:'tdform', component:TdformComponent},

@@ -1,0 +1,24 @@
+<p>demopost works!</p>
+<div>
+    <table class="table">
+       
+        <thead>
+           
+            <tr>
+                <th> userId</th>
+                <th>id</th>
+                <th>title</th>
+                <th>body</th>
+            </tr>
+         </thead>
+  
+    <tbody>
+        <tr *ngFor="let obj of arrposts">
+            <td>{{obj.userId}}</td>
+            <td><a [routerLink]="['/postdetails',obj.id] " >{{obj.id}}</a>  </td>
+            <td>{{obj.  title}}</td>
+            <td>{{obj. body}}</td>
+        </tr>
+    </tbody>
+</table>
+</div>
