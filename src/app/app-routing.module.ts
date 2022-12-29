@@ -1,5 +1,5 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
@@ -7,6 +7,7 @@ import { FeedbackComponent } from './feedback/feedback.component';
 import { GalleryComponent } from './gallery/gallery.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
+import { Product } from './models/Product';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
 import { LaptopComponent } from './product/laptop/laptop.component';
@@ -23,23 +24,29 @@ const routes: Routes = [
   {path:'login',component:LoginComponent},
   {path:"home",component:HomeComponent},
   { path:'aboutus', component: AboutusComponent } ,// localhost://4200/aboutus
-{ path:'product',  component:ProductComponent, children:[//localhost:4200/ptroduct/tv,laptop,tab,washing_maching are child componant
-{path:'laptop',component:LaptopComponent},
-    {path:'tv',component:TvComponent},
-    {path:'tablet',component:TabletComponent},
-    {path:'washingMachin',component:WashingMachinComponent},
-   ]}, // localhost://4200/product
+
    {path:'post',component:DemopostComponent},
    {path:'postdetails/:id',component:PostdetailsComponent},
 { path:'contactus', component: ContactusComponent},
 {path:'gallery', component:GalleryComponent},
 {path:'tdform', component:TdformComponent},
 {path:'feedback',component:FeedbackComponent},
+{path:'product',loadChildren:'./product/products.module#ProductsModule'},
+{path:'orders',loadChildren:'./orders/orders.module#OrdersModule'},
+ {path:'select',loadChildren:'./select/select.module#SelectModule'},
+
 {path:"**",component:PagenotfoundComponent}
 ];
 
+
+
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes 	,{preloadingStrategy:PreloadAllModules} )],
   exports: [RouterModule]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule { 
+  constructor(){
+    console.log(" in app-routing module");
+    
+  }
+}

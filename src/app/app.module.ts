@@ -42,7 +42,7 @@ import { PipedemoComponent } from './pipedemo/pipedemo.component';
 import { CountPipe } from './count.pipe';
 import { FilterpipeComponent } from './filterpipe/filterpipe.component';
 import { FilterPipe } from './filter.pipe';
-import { ProductComponent } from './product/product.component';
+
 import { ContactusComponent } from './contactus/contactus.component';
 import { AboutusComponent } from './aboutus/aboutus.component';
 import { HomeComponent } from './home/home.component';
@@ -54,12 +54,16 @@ import { GenderpipeComponent } from './genderpipe/genderpipe.component';
 import { GenderPipe } from './gender.pipe';
 import { Employee1Component } from './employee1/employee1.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
-import { LaptopComponent } from './product/laptop/laptop.component';
-import { TvComponent } from './product/tv/tv.component';
-import { WashingMachinComponent } from './product/washing-machin/washing-machin.component';
-import { TabletComponent } from './product/tablet/tablet.component';
+
 import { DemopostComponent } from './demopost/demopost.component';
 import { PostdetailsComponent } from './postdetails/postdetails.component';
+import { ProductsModule } from './product/products.module';
+import { UtilityModule } from './models/utility.module';
+import { RoutersRoutingModule } from './orders/routers-routing.module';
+import { OrdersModule } from './orders/orders.module';
+
+// import { SaleslistComponent } from './sales/saleslist/saleslist.component';
+
 
 
 
@@ -79,7 +83,7 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     Assign25ngForComponent,
     Assign25ngSwitchComponent,
     AttriComponent,
-    CustdirDirective,
+  
     PasswordvalDirective,
     InputedirComponent,
     HooksComponent,
@@ -104,7 +108,7 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     CountPipe,
     FilterpipeComponent,
     FilterPipe,
-    ProductComponent,
+   // ProductComponent,
     ContactusComponent,
     AboutusComponent,
     HomeComponent,
@@ -116,12 +120,11 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
     GenderPipe,
     Employee1Component,
     PagenotfoundComponent,
-    LaptopComponent,
-    TvComponent,
-    WashingMachinComponent,
-    TabletComponent,
+   
     DemopostComponent,
-    PostdetailsComponent
+    PostdetailsComponent,
+    // SaleslistComponent,
+   
 
 
 
@@ -132,14 +135,28 @@ import { PostdetailsComponent } from './postdetails/postdetails.component';
 
   ],
   imports: [
+    UtilityModule,
+ 
+    
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     BrowserModule,
     HttpClientModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+   
+  
+    
+  
+   
+
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+  constructor(){
+    console.log(" In AppModule");
+    
+  }
+}
