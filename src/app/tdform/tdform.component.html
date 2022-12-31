@@ -7,7 +7,7 @@
                 <legend><b>Template Driven Form</b></legend>
                 <div class="form-group">
                     <label for="name">First Name</label>
-                    <input type="text" placeholder="enter first name" #name="ngModel" required minlength="5" maxlength="5" ngModel name="name" class="form-control">
+                    <input type="text" placeholder="enter first name"      #name="ngModel" required minlength="5" maxlength="5" ngModel [name]="name" class="form-control">
                     <small class="text-danger" *ngIf="name.invalid && name.touched">Enter valid first name with minimum and maximum 5 character allowed</small>
 
                 </div>

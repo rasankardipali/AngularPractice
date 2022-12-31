@@ -9,6 +9,7 @@ import { FormControl, FormGroup, RequiredValidator, Validators } from '@angular/
 export class RaformComponent implements OnInit {
 
   myReactiveform: FormGroup;
+name: FormControl=new FormControl();
   constructor() {
    this.createForm();
    }

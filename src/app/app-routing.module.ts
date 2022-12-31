@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadingStrategy, PreloadAllModules } from '@angular/router';
 import { AboutusComponent } from './aboutus/aboutus.component';
+import { AuthGuard } from './auth.guard';
 import { ContactusComponent } from './contactus/contactus.component';
 import { DemopostComponent } from './demopost/demopost.component';
 import { FeedbackComponent } from './feedback/feedback.component';
@@ -15,8 +16,10 @@ import { ProductComponent } from './product/product.component';
 import { TabletComponent } from './product/tablet/tablet.component';
 import { TvComponent } from './product/tv/tv.component';
 import { WashingMachinComponent } from './product/washing-machin/washing-machin.component';
+import { RaformComponent } from './raform/raform.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { TdformComponent } from './tdform/tdform.component';
+import { UnsavedChangesGuard } from './unsaved-changes.guard';
 
 
 const routes: Routes = [ 
@@ -25,11 +28,11 @@ const routes: Routes = [
   {path:"home",component:HomeComponent},
   { path:'aboutus', component: AboutusComponent } ,// localhost://4200/aboutus
 
-   {path:'post',component:DemopostComponent},
+   {path:'post', canActivate:[AuthGuard],component:DemopostComponent},
    {path:'postdetails/:id',component:PostdetailsComponent},
 { path:'contactus', component: ContactusComponent},
 {path:'gallery', component:GalleryComponent},
-{path:'tdform', component:TdformComponent},
+{path:'raform',   canDeactivate:[UnsavedChangesGuard],component:RaformComponent},
 {path:'feedback',component:FeedbackComponent},
 {path:'product',loadChildren:'./product/products.module#ProductsModule'},
 {path:'orders',loadChildren:'./orders/orders.module#OrdersModule'},
