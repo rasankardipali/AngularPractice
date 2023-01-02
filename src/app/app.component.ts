@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
+
 import { DemeserviceService } from './demeservice.service';
 import { Courses } from './models/course';
 import { Product } from './models/Product';
+import { PostService } from './post.service';
 
 @Component({
   selector: 'app-root',
@@ -11,7 +13,7 @@ import { Product } from './models/Product';
 export class AppComponent {
 
 array=[];
-  constructor( private _demeserviceService:DemeserviceService){
+  constructor( private _demeserviceService:DemeserviceService,private _postservice:PostService){
 
   }
 ngOnInit():void{
@@ -64,5 +66,11 @@ ngOnInit():void{
     destroy(){
       this.appchildExist=false;
       
+    }
+    deletePost(){
+      this._postservice.deletePostById(1).subscribe(res=>{
+        console.log(" delete data from server",res);
+        
+      })
     }
   }

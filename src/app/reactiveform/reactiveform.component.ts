@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormArray, FormBuilder, FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
 import { Observable } from 'rxjs/internal/Observable';
+import { FireBasePost } from '../models/fireBasePost';
+
+import { FirebaseService } from '../service/firebase.service';
 
 @Component({
   selector: 'app-reactiveform',
@@ -20,7 +23,9 @@ notAllowedNames=['codemind','technology'];
 
 
 myReactiveForm: FormGroup;
-  constructor( private _fb:FormBuilder) {   this.createForm(); 
+fireBasePost:FireBasePost
+  constructor( private _fb:FormBuilder, private _firebase:FirebaseService) 
+  {   this.createForm(); 
   }
 
   ngOnInit() {
@@ -39,6 +44,19 @@ myReactiveForm: FormGroup;
   OnSubmit(){
   this.submitted=true;
     console.log(this.myReactiveform);
+this.fireBasePost= new FireBasePost();
+ this.fireBasePost. userName=this.myReactiveform['controls'].userDetail['controls']. userName.value;
+ this.fireBasePost.email=this.myReactiveform['controls'].userDetail['controls'].email.value;
+this.fireBasePost.Course=this.myReactiveform['controls'].Course.value;
+this.fireBasePost.gender=this.myReactiveform['controls'].gender.value;
+this.fireBasePost. skills=this.myReactiveform['controls']. skills.value;
+
+this._firebase.createPostDataReactiveForm(this.fireBasePost).subscribe(res =>{
+  console.log('post data from reactive form',this.fireBasePost );
+  
+})
+
+
     
   }
 
@@ -81,6 +99,15 @@ createForm(){
 //   })
  
 // }
+
+
+
+
+
+
+
+
+
 
 this.myReactiveform = this._fb.group({
   userDetail: this._fb.group({

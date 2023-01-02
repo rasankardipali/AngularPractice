@@ -61,6 +61,7 @@ import { ProductsModule } from './product/products.module';
 import { UtilityModule } from './models/utility.module';
 import { RoutersRoutingModule } from './orders/routers-routing.module';
 import { OrdersModule } from './orders/orders.module';
+import { RapidComponent } from './rapid/rapid.component';
 
 // import { SaleslistComponent } from './sales/saleslist/saleslist.component';
 
@@ -123,6 +124,7 @@ import { OrdersModule } from './orders/orders.module';
    
     DemopostComponent,
     PostdetailsComponent,
+    RapidComponent,
     // SaleslistComponent,
    
 
