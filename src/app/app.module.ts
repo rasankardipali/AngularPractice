@@ -62,6 +62,7 @@ import { UtilityModule } from './models/utility.module';
 import { RoutersRoutingModule } from './orders/routers-routing.module';
 import { OrdersModule } from './orders/orders.module';
 import { RapidComponent } from './rapid/rapid.component';
+import { Project1Component } from './project1/project1.component';
 
 // import { SaleslistComponent } from './sales/saleslist/saleslist.component';
 
@@ -125,6 +126,7 @@ import { RapidComponent } from './rapid/rapid.component';
     DemopostComponent,
     PostdetailsComponent,
     RapidComponent,
+    Project1Component,
     // SaleslistComponent,
    
 

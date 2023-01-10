@@ -27,10 +27,10 @@ export class RapidComponent implements OnInit {
 
 
 
-  createPost(){
+  // createPost(){
 
   
-  }
+  // }
 //  showData(){
 // this._rapidservice.getData().subscribe(res=>{
 //    console.log("Api data ",res);

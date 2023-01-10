@@ -1,6 +1,10 @@
+
 import { Component, OnInit } from '@angular/core';
-import { FormArray, FormBuilder, FormControl, FormGroup, RequiredValidator, Validators } from '@angular/forms';
+import { FormArray, FormBuilder, FormControl, FormGroup,  Validators } from '@angular/forms';
+import * as internal from 'events';
+import { from, interval } from 'rxjs';
 import { Observable } from 'rxjs/internal/Observable';
+import { filter, map, take, takeLast, toArray,} from 'rxjs/operators';
 import { FireBasePost } from '../models/fireBasePost';
 
 import { FirebaseService } from '../service/firebase.service';
@@ -29,6 +33,65 @@ fireBasePost:FireBasePost
   }
 
   ngOnInit() {
+
+// const data1=from(this._firebase.users);  //manuplate urser array   data using from oprator
+// data1.pipe(map(x=>x.name+" "+ 'data')
+//    ).subscribe(res=>{
+//   console.log(" Example of from operatore",res);
+  
+
+// })
+
+//filter
+//  const data=from(this._firebase.users);
+//  data.pipe( filter(u =>u.gender =='female'),
+//  toArray()
+
+//  ).subscribe(res =>{
+//   console.log('filter operator',res);
+  
+//  })
+
+ //take opersator
+
+//  const source=interval(40);
+//  source.subscribe(res=>{
+//   console.log('interval example',res);
+  
+//  })
+//or
+//take last 
+ let randomsNames=[ 'Dipali','Rupali','Radha','Seeta','Anuradha'];
+ const source=from(randomsNames);
+ source.pipe(takeLast(2)).subscribe(res =>{
+  console.log("take last operator",res);
+  
+ })
+  
+  
+
+  
+
+
+
+
+this._firebase.getPostDataFirebase().pipe( map( responseData =>{ 
+  const postArray =[];
+  for(const key in responseData){
+    if(responseData.hasOwnProperty(key)){
+      postArray.push({...responseData[key], id:key})
+    }
+  }
+return postArray;
+})).subscribe(res=>{
+     console.log('get data from firebase API',res);
+  
+})
+
+
+
+
+    
 
 
    setTimeout(() => {
